@@ -2,8 +2,8 @@ FROM alpine:edge
 
 LABEL maintainer="Goran Jovanov <goran.jovanov@gmail.com>"
 
-# Build NodeJS
-ENV NODE_VERSION 11.5.0
+# Build NodeJS 
+ENV NODE_VERSION 13.11.0
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
@@ -20,6 +20,7 @@ RUN addgroup -g 1000 node \
         python \
   # gpg keys listed at https://github.com/nodejs/node#release-team
   && for key in \
+    6A010C5166006599AA17F08146C2130DFD2497F5 \
     4ED778F539E3634C779C87C6D7062848A1AB005C \
     B9E2F5981AA6E0CD28160D9FF13993A75599653C \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \

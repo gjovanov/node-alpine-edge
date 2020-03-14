@@ -1,1 +1,1 @@
-# Docker image with alpine edge and node v11.5.0 
+# Docker image with alpine edge and node v13.11.0 
